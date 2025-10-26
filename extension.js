@@ -2,7 +2,7 @@ const vscode = require('vscode');
 const {exec} = require('child_process');
 
 function activate(context) {
-  console.log('Stop Unpleasant Voice Р°РєС‚РёРІРёСЂРѕРІР°РЅ');
+  console.log('Stop Unpleasant Voice стоп, мне неприятно!');
 
   vscode.languages.onDidChangeDiagnostics((event) => {
     for (const uri of event.uris) {
@@ -11,9 +11,8 @@ function activate(context) {
           diagnostics.some(d => d.severity === vscode.DiagnosticSeverity.Error);
 
       if (hasError) {
-        vscode.window.showWarningMessage(
-            'РЎС‚РѕРї, РјРЅРµ РЅРµРїСЂРёСЏС‚РЅРѕ!');
-        exec(`say "РЎС‚РѕРї, РјРЅРµ РЅРµРїСЂРёСЏС‚РЅРѕ!"`);
+        vscode.window.showWarningMessage('стоп, мне неприятно!');
+        exec(`say "стоп, мне неприятно!"`);
         break;
       }
     }

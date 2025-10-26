@@ -1,0 +1,19 @@
+{
+  "name": "ISRPO-lab-3",
+  "displayName": "ISRPO-lab-3",
+  "description": "Плагин, который говорит 'Стоп, мне неприятно', если в коде появляется ошибка.",
+  "version": "0.0.1",
+  "publisher": "KabanovV",
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "activationEvents": [
+    "*"
+  ],
+  "main": "./extension.js",
+  "contributes": {},
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "echo 'no compile needed'"
+  }
+}
